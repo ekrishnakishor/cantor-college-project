@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cantor College</title>
     <link rel="stylesheet" href="Style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="shortcut icon" href="./Images/logo.png" type="image/x-icon" />
   </head>
   <body>
     <!-- following proper semantics -->
@@ -15,23 +17,58 @@
       <div class="right">
         <nav>
           <a href="#">Home</a>
-          <a href="#">Academics</a>
           <a href="#">About us</a>
-          <a href="#">Contact</a>
+          <div class="dropdown">
+            <a href="#">Courses</a>
+            <div class="dropdown-options">
+              <a href="#">Computing courses</a>
+              <a href="#">Design courses</a>
+              <a href="#">Learning Resources</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <a href="#">Informations</a>
+            <div class="dropdown-options">
+              <a href="#">Facilitiers</a>
+              <a href="#">Information for Staff </a>
+              <a href="#">Information for students </a>
+              <a href="#">Working with business</a>
+            </div>
+          </div>
+          <a href="#">Contact us</a>
         </nav>
       </div>
     </header>
     <!-- main image section  -->
     <section id="main-image">
-      <img
-        src="./Images/Cantor Lecture Theatre 3.jpg"
-        alt="main-image"
-        id="bg-image"
-      />
+      <img src="./Images/Cantor atrium 3.jpg" alt="main-image" id="bg-image" />
       <div class="headings">
         <h1>Welcome to Cantor College!</h1>
+        <p>Learning is a journey, not a destination.</p>
         <button id="know-more">Know more</button>
+        <button id="join-now">Join Now</button>
       </div>
     </section>
+    <!-- main image section ends -->
+
+    <section id="latest-news">
+      <h3>Latest News</h3>
+      <div class="news-container">
+        <div class="news">
+          <img src="./Images/IMG_1099.jpeg" alt="news-image-01" />
+          <p>Discussions</p>
+        </div>
+        <div class="news">
+          <img src="./Images/Cantor Lecture Theatre 3.jpg" alt="news-image-02" />
+          <p>Discussions</p>
+        </div>
+        <div class="news">
+          <img src="./Images/IMG_0170.jpeg" alt="news-image-01" />
+          <p>Discussions</p>
+        </div>
+      </div>
+    </section>
+
+    <script src="Dropdown.js"></script>
   </body>
 </html>
