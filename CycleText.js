@@ -6,12 +6,11 @@ function typeText() {
     ];
     let currentIndex = 0;
     const spanElement = document.querySelector('.headings p span');
-    const text = texts[currentIndex];
     let index = 0;
 
     function type() {
-      if (index < text.length) {
-        spanElement.textContent += text.charAt(index);
+      if (index < texts[currentIndex].length) {
+        spanElement.textContent += texts[currentIndex].charAt(index);
         index++;
         setTimeout(type, 100); // Adjust typing speed (milliseconds)
       } else {
@@ -21,13 +20,14 @@ function typeText() {
 
     function erase() {
       if (index >= 0) {
-        const newText = text.substring(0, index - 1);
+        const newText = texts[currentIndex].substring(0, index - 1);
         spanElement.textContent = newText;
         index--;
         setTimeout(erase, 50); // Adjust erasing speed (milliseconds)
       } else {
         currentIndex = (currentIndex + 1) % texts.length;
-        setTimeout(typeText, 500); // Wait before typing new text
+        index = 0; // Reset index to 0 when switching to a new text
+        setTimeout(type, 500); // Wait before typing new text
       }
     }
 
