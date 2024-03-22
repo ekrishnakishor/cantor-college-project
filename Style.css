@@ -169,6 +169,10 @@ span {
   position: relative;
 }
 
+#life .about-img img {
+  border-radius: 50px;
+}
+
 #life h2 {
   margin-bottom: 20px;
 }
