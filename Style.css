@@ -191,7 +191,7 @@ span {
 #life .lifeTitle p {
   line-height: 1.8; /* Adjust line height as needed */
   text-align: justify;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 footer {
